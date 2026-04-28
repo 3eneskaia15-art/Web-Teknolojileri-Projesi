@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlgi Alanlarım</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #0F172A;
+            color: #F8FAFC;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .highlight-text {
+            color: #38BDF8;
+        }
+
+        .info-box {
+            background-color: #1E293B;
+            border-left: 5px solid #38BDF8;
+        }
+
+        .custom-link {
+            background-color: #1E293B;
+            color: #38BDF8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .custom-link:hover {
+            background-color: #38BDF8;
+            color: #0F172A;
+        }
+
+        .custom-navbar {
+            background-color: #1E293B;
+        }
+        
+        .custom-navbar .navbar-brand, .custom-navbar .nav-link {
+            color: #38BDF8;
+        }
+
+        .custom-navbar .nav-link:hover {
+            color: #F8FAFC;
+        }
+
+        /* API Sonuçları için tasarım */
+        .api-result-item {
+            background-color: #0F172A;
+            border: 1px solid #38BDF8;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+
+        .api-result-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 6px -1px rgba(56, 189, 248, 0.2);
+        }
+
+        .api-result-item img {
+            border-radius: 5px;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .api-result-item audio {
+            height: 30px;
+            margin-top: 10px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg custom-navbar mb-4 shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="GirisSayfasi.html">Portfolyo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="GirisSayfasi.html">Ana Sayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Hakkımda.html">Hakkımda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Şehrim.html">Şehrim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="İlgi-Alanlarım.html" style="color: #F8FAFC;">İlgi Alanlarım</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4">
+        
+        <header class="text-center mb-5">
+            <h1 class="highlight-text display-5 fw-bold">İlgi Alanlarım</h1>
+            <p class="lead">Hobilerim, tutkularım ve API Entegrasyonu</p>
+        </header>
+
+        <div class="row g-4">
+            <!-- Video Oyunları -->
+            <div class="col-md-4">
+                <section class="info-box p-4 h-100 rounded shadow">
+                    <h2 class="highlight-text mb-3">🎮 Video Oyunları</h2>
+                    <p>
+                        Video oyunları oynamak en sevdiğim aktivitelerden biri. Farklı evrenleri keşfetmek ve zorlu mücadelelere katılmak harika bir his. Favori oyunlarım şunlardır:
+                    </p>
+                    <ul>
+                        <li class="mb-2"><strong>Elden Ring:</strong> Açık dünyası, gizemleri ve zorlayıcı mekanikleriyle unutulmaz bir deneyim.</li>
+                        <li><strong>Dead Cells:</strong> Hızlı temposu, akıcı dövüş mekanikleri ve tekrar oynanabilirliğiyle harika bir rogue-lite.</li>
+                    </ul>
+                </section>
+            </div>
+            
+            <!-- Kitap Okumak -->
+            <div class="col-md-4">
+                <section class="info-box p-4 h-100 rounded shadow">
+                    <h2 class="highlight-text mb-3">📚 Kitap Okumak</h2>
+                    <p>
+                        Kitap okumak, farklı dünyalara dalmak ve hayal gücümü genişletmek için mükemmel bir yol. Özellikle fantastik edebiyat favorimdir.
+                    </p>
+                    <ul>
+                        <li><strong>Ranger's Apprentice Serisi:</strong> Karakter gelişimi, gizlilik, zeka ve sürükleyici macera dolu kurgusuyla en sevdiğim kitap serisidir.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Müzik Dinlemek -->
+            <div class="col-md-4">
+                <section class="info-box p-4 h-100 rounded shadow">
+                    <h2 class="highlight-text mb-3">🎵 Müzik Dinlemek</h2>
+                    <p>
+                        Müzik hayatımın vazgeçilmez bir parçası. Farklı tarzları dinlemeyi severim ancak bazı sanatçı ve grupların yeri bende çok özeldir.
+                    </p>
+                    <ul>
+                        <li class="mb-2"><strong>Old Man's Poison:</strong> Kendilerine has tarzları, folk esintileri ve etkileyici sözleriyle.</li>
+                        <li><strong>Hidra:</strong> Türkçe rap sahnesindeki en güçlü ve isyankar kalemlerden biri.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <!-- API Entegrasyonu Bölümü -->
+        <section class="mt-5 info-box p-4 rounded shadow">
+            <h2 class="highlight-text mb-3">🎧 API Entegrasyonu: Favori Şarkılarım (iTunes API)</h2>
+            <p>Aşağıdaki müzik verileri internet üzerinden ücretsiz bir API olan iTunes Search API kullanılarak anlık olarak çekilmektedir. (Döviz ve hava durumu harici)</p>
+            
+            <div id="api-results" class="mt-4">
+                <div class="d-flex align-items-center text-info">
+                    <div class="spinner-border me-3" role="status">
+                        <span class="visually-hidden">Yükleniyor...</span>
+                    </div>
+                    <span>API'den şarkılar çekiliyor, lütfen bekleyin...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Oyun API Entegrasyonu Bölümü -->
+        <section class="mt-5 info-box p-4 rounded shadow">
+            <h2 class="highlight-text mb-3">🎮 API Entegrasyonu: Favori Oyunum (CheapShark API)</h2>
+            <p>Aşağıdaki oyun verisi internet üzerinden ücretsiz bir API olan CheapShark API kullanılarak anlık olarak çekilmektedir.</p>
+            
+            <div id="game-api-results" class="mt-4">
+                <div class="d-flex align-items-center text-info">
+                    <div class="spinner-border me-3" role="status">
+                        <span class="visually-hidden">Yükleniyor...</span>
+                    </div>
+                    <span>Oyun verisi çekiliyor, lütfen bekleyin...</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center mt-5">
+            <a href="GirisSayfasi.html" class="custom-link d-inline-block px-4 py-2 rounded fw-semibold shadow-sm">Ana Sayfaya Dön</a>
+        </div>
+
+    </main>
+
+    <footer class="text-center py-4 mt-4" style="background-color: #1E293B; color: #F8FAFC;">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Enes Kaya. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- API Entegrasyonu Scripti -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const apiContainer = document.getElementById('api-results');
+            
+            // Çekilecek spesifik şarkılar (Arama terimleri)
+            const songsToFetch = [
+                "per aspera ad astra haggard",
+                "uçurumlar no.1",
+                "hail to the king avenged sevenfold"
+            ];
+
+            // Her şarkı için iTunes API isteği oluştur
+            const fetchPromises = songsToFetch.map(query => {
+                const apiUrl = `https://itunes.apple.com/search?term=${encodeURIComponent(query)}&limit=1&entity=song`;
+                return fetch(apiUrl).then(response => {
+                    if (!response.ok) throw new Error('API yanıt vermedi.');
+                    return response.json();
+                });
+            });
+
+            // Tüm istekleri paralel olarak başlat ve bekle
+            Promise.all(fetchPromises)
+                .then(results => {
+                    apiContainer.innerHTML = ''; // Yükleniyor yazısını temizle
+                    
+                    results.forEach((data, index) => {
+                        if (data.results && data.results.length > 0) {
+                            const song = data.results[0];
+                            
+                            // Her şarkı için özel bir kart oluştur
+                            const songItem = document.createElement('div');
+                            songItem.className = 'api-result-item';
+                            
+                            // Tarih formatlama
+                            const releaseDate = new Date(song.releaseDate).toLocaleDateString('tr-TR', { year: 'numeric', month: 'long', day: 'numeric' });
+                            
+                            songItem.innerHTML = `
+                                <img src="${song.artworkUrl100}" alt="${song.trackName} Albüm Kapağı" width="100" height="100">
+                                <div class="flex-grow-1">
+                                    <h5 class="mb-1 fw-bold" style="color: #F8FAFC;">${song.trackName}</h5>
+                                    <div style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 5px;">
+                                        <strong>Albüm:</strong> ${song.collectionName || 'Bilinmiyor'} <br>
+                                        <strong>Sanatçı:</strong> ${song.artistName} <br>
+                                        <strong>Çıkış:</strong> ${releaseDate}
+                                    </div>
+                                    <audio controls src="${song.previewUrl}">
+                                        Tarayıcınız ses oynatmayı desteklemiyor.
+                                    </audio>
+                                </div>
+                            `;
+                            apiContainer.appendChild(songItem);
+                        } else {
+                            // Şarkı bulunamazsa uyarı göster
+                            apiContainer.innerHTML += `<div class="alert alert-warning mb-2"><strong>${songsToFetch[index]}</strong> için sonuç bulunamadı.</div>`;
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('API Çekme Hatası:', error);
+                    apiContainer.innerHTML = `
+                        <div class="alert alert-danger">
+                            <strong>Hata:</strong> API'den veri çekilirken bir sorun oluştu. Lütfen internet bağlantınızı kontrol edin.
+                        </div>
+                    `;
+                });
+            // CheapShark API kullanarak Favori Oyunları çekme işlemi
+            const gameApiContainer = document.getElementById('game-api-results');
+            if (gameApiContainer) {
+                const gamesToFetch = ["dead cells", "v rising", "elden ring"];
+                
+                const gamePromises = gamesToFetch.map(query => {
+                    return fetch(`https://www.cheapshark.com/api/1.0/games?title=${encodeURIComponent(query)}`)
+                        .then(res => {
+                            if (!res.ok) throw new Error('API yanıt vermedi.');
+                            return res.json();
+                        });
+                });
+
+                Promise.all(gamePromises)
+                    .then(results => {
+                        gameApiContainer.innerHTML = ''; // Yükleniyor yazısını temizle
+                        
+                        results.forEach((data, index) => {
+                            if (data && data.length > 0) {
+                                const game = data[0]; // İlk eşleşen oyun
+                                
+                                const gameItem = document.createElement('div');
+                                gameItem.className = 'api-result-item';
+                                
+                                gameItem.innerHTML = `
+                                    <img src="${game.thumb}" alt="${game.external} Kapak" width="120">
+                                    <div class="flex-grow-1">
+                                        <h5 class="mb-1 fw-bold" style="color: #F8FAFC;">${game.external}</h5>
+                                        <div style="color: #94A3B8; font-size: 0.9rem;">
+                                            <strong>Steam App ID:</strong> ${game.steamAppID} <br>
+                                            <strong>En Düşük Fiyat:</strong> $${game.cheapest}
+                                        </div>
+                                    </div>
+                                `;
+                                gameApiContainer.appendChild(gameItem);
+                            } else {
+                                gameApiContainer.innerHTML += `<div class="alert alert-warning mb-2"><strong>${gamesToFetch[index]}</strong> bulunamadı.</div>`;
+                            }
+                        });
+                    })
+                    .catch(err => {
+                        console.error('Game API Error:', err);
+                        gameApiContainer.innerHTML = '<div class="alert alert-danger">Oyun verileri çekilirken hata oluştu.</div>';
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
