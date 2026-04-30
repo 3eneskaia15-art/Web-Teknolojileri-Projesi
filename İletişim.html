@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Enes Kaya</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <style>
+        body {
+            background-color: #0F172A;
+            color: #F8FAFC;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .highlight-text {
+            color: #38BDF8;
+        }
+
+        .info-box, .form-box {
+            background-color: #1E293B;
+            border-left: 5px solid #38BDF8;
+        }
+
+        .custom-navbar {
+            background-color: #1E293B;
+        }
+        
+        .custom-navbar .navbar-brand, .custom-navbar .nav-link {
+            color: #38BDF8;
+        }
+
+        .custom-navbar .nav-link:hover {
+            color: #F8FAFC;
+        }
+
+        .form-control, .form-select {
+            background-color: #0F172A;
+            border: 1px solid #334155;
+            color: #F8FAFC;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background-color: #0F172A;
+            color: #F8FAFC;
+            border-color: #38BDF8;
+            box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25);
+        }
+
+        .btn-custom-vue {
+            background-color: #42b883;
+            color: #1E293B;
+            font-weight: bold;
+        }
+        .btn-custom-vue:hover {
+            background-color: #33a06f;
+            color: white;
+        }
+
+        .btn-custom-vanilla {
+            background-color: #f7df1e;
+            color: #1E293B;
+            font-weight: bold;
+        }
+        .btn-custom-vanilla:hover {
+            background-color: #d4bf14;
+            color: #1E293B;
+        }
+
+        .custom-link {
+            color: #38BDF8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .custom-link:hover {
+            color: #F8FAFC;
+            text-decoration: underline;
+        }
+        
+        .error-message {
+            color: #ef4444;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+        .success-message {
+            color: #22c55e;
+            font-size: 1rem;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg custom-navbar mb-4 shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="GirisSayfasi.html">Portfolyo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="GirisSayfasi.html">Ana Sayfa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Hakkımda.html">Hakkımda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Özgeçmiş.html">Özgeçmiş</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Şehrim.html">Şehrim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Mirasımız.html">Mirasımız</a></li>
+                        <li class="nav-item"><a class="nav-link" href="İlgi-Alanlarım.html">İlgi Alanlarım</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="İletişim.html" style="color: #F8FAFC;">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4" id="app">
+        <header class="text-center mb-5">
+            <h1 class="highlight-text display-5 fw-bold">İletişim</h1>
+            <p class="lead">Benimle aşağıdaki bilgilerden veya iletişim formu üzerinden iletişime geçebilirsiniz.</p>
+        </header>
+
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <section class="info-box p-4 h-100 rounded shadow">
+                    <h3 class="highlight-text mb-4">İletişim Bilgilerim</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <strong><i class="bi bi-envelope"></i> E-Posta:</strong><br>
+                            <a href="mailto:ogr.enes.kaya12@sakarya.edu.tr" class="custom-link">ogr.enes.kaya12@sakarya.edu.tr</a>
+                        </li>
+                        <li class="mb-3">
+                            <strong><i class="bi bi-github"></i> Github:</strong><br>
+                            <a href="https://github.com/3eneskaia15-art" target="_blank" class="custom-link">github.com/3eneskaia15-art</a>
+                        </li>
+                        <li class="mb-3">
+                            <strong><i class="bi bi-linkedin"></i> LinkedIn:</strong><br>
+                            <a href="https://www.linkedin.com/in/enes-kaya-bba56a401/" target="_blank" class="custom-link">linkedin.com/in/enes-kaya</a>
+                        </li>
+                        <li class="mb-3">
+                            <strong><i class="bi bi-geo-alt"></i> Adres:</strong><br>
+                            Sakarya, Türkiye
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="col-lg-8">
+                <section class="form-box p-4 rounded shadow">
+                    <h3 class="highlight-text mb-4">Bana Mesaj Gönderin</h3>
+                    
+                    <form id="contactForm" @submit.prevent>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="isim" class="form-label">Adınız Soyadınız *</label>
+                                <input type="text" class="form-control" id="isim" v-model="formData.isim" placeholder="Ad Soyad">
+                                <div class="error-message" id="err-isim">{{ errors.isim }}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">E-Posta Adresi *</label>
+                                <input type="email" class="form-control" id="email" v-model="formData.email" placeholder="ornek@mail.com">
+                                <div class="error-message" id="err-email">{{ errors.email }}</div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="telefon" class="form-label">Telefon Numarası (Sadece Rakam) *</label>
+                                <input type="tel" class="form-control" id="telefon" v-model="formData.telefon" placeholder="05551234567">
+                                <div class="error-message" id="err-telefon">{{ errors.telefon }}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="konu" class="form-label">Konu Seçiniz *</label>
+                                <select class="form-select" id="konu" v-model="formData.konu">
+                                    <option value="" disabled selected>Lütfen Bir Konu Seçin</option>
+                                    <option value="İş Teklifi">İş Teklifi</option>
+                                    <option value="Proje İşbirliği">Proje İşbirliği</option>
+                                    <option value="Geri Bildirim">Geri Bildirim</option>
+                                    <option value="Diğer">Diğer</option>
+                                </select>
+                                <div class="error-message" id="err-konu">{{ errors.konu }}</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label d-block">Size Nasıl Hitap Edelim? *</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="cinsiyet" id="bey" value="Bey" v-model="formData.cinsiyet">
+                                <label class="form-check-label" for="bey">Bey</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="cinsiyet" id="hanim" value="Hanım" v-model="formData.cinsiyet">
+                                <label class="form-check-label" for="hanim">Hanım</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="cinsiyet" id="belirtmek_istemiyorum" value="Belirtmek İstemiyorum" v-model="formData.cinsiyet">
+                                <label class="form-check-label" for="belirtmek_istemiyorum">Belirtmek İstemiyorum</label>
+                            </div>
+                            <div class="error-message" id="err-cinsiyet">{{ errors.cinsiyet }}</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mesaj" class="form-label">Mesajınız *</label>
+                            <textarea class="form-control" id="mesaj" rows="4" v-model="formData.mesaj" placeholder="Mesajınızı buraya yazın..."></textarea>
+                            <div class="error-message" id="err-mesaj">{{ errors.mesaj }}</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="onay" v-model="formData.onay">
+                                <label class="form-check-label" for="onay">
+                                    Verilerimin işlenmesini kabul ediyorum. *
+                                </label>
+                            </div>
+                            <div class="error-message" id="err-onay">{{ errors.onay }}</div>
+                        </div>
+
+                        <div id="success-message-vanilla" class="success-message d-none mb-3">Vanilla JS: Form başarıyla gönderildi! İşleminiz işleniyor.</div>
+                        <div v-if="isSuccessVue" class="success-message mb-3">Vue.js: Form başarıyla gönderildi! İşleminiz işleniyor.</div>
+
+                        <div class="d-flex gap-3 flex-wrap">
+                            <button type="button" class="btn btn-custom-vanilla px-4 py-2" onclick="validateFormVanilla()">
+                                Vanilla JS ile Doğrula ve Gönder
+                            </button>
+                            
+                            <button type="button" class="btn btn-custom-vue px-4 py-2" @click="validateFormVue">
+                                Vue.js ile Doğrula ve Gönder
+                            </button>
+
+                            <button type="reset" class="btn btn-outline-secondary px-4 py-2" @click="resetForm">
+                                Formu Temizle
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-center py-4 mt-5" style="background-color: #1E293B; color: #F8FAFC;">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Enes Kaya. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function clearVanillaErrors() {
+            const errorDivs = document.querySelectorAll('[id^="err-"]');
+            errorDivs.forEach(div => div.innerText = "");
+            document.getElementById('success-message-vanilla').classList.add('d-none');
+        }
+
+        function validateFormVanilla() {
+            clearVanillaErrors();
+            let isValid = true;
+
+            const isim = document.getElementById('isim').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefon = document.getElementById('telefon').value.trim();
+            const konu = document.getElementById('konu').value;
+            const mesaj = document.getElementById('mesaj').value.trim();
+            const onay = document.getElementById('onay').checked;
+            
+            const cinsiyetRadios = document.getElementsByName('cinsiyet');
+            let isCinsiyetSelected = false;
+            for(let radio of cinsiyetRadios) {
+                if(radio.checked) {
+                    isCinsiyetSelected = true;
+                    break;
+                }
+            }
+
+            if (!isim) {
+                document.getElementById('err-isim').innerText = "İsim alanı boş bırakılamaz.";
+                isValid = false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email) {
+                document.getElementById('err-email').innerText = "E-Posta alanı boş bırakılamaz.";
+                isValid = false;
+            } else if (!emailRegex.test(email)) {
+                document.getElementById('err-email').innerText = "Geçerli bir E-Posta adresi giriniz.";
+                isValid = false;
+            }
+
+            const telefonRegex = /^[0-9]+$/;
+            if (!telefon) {
+                document.getElementById('err-telefon').innerText = "Telefon numarası boş bırakılamaz.";
+                isValid = false;
+            } else if (!telefonRegex.test(telefon)) {
+                document.getElementById('err-telefon').innerText = "Telefon numarası sadece rakamlardan oluşmalıdır.";
+                isValid = false;
+            }
+
+            if (!konu) {
+                document.getElementById('err-konu').innerText = "Lütfen bir konu seçiniz.";
+                isValid = false;
+            }
+
+            if (!isCinsiyetSelected) {
+                document.getElementById('err-cinsiyet').innerText = "Lütfen bir hitap şekli seçiniz.";
+                isValid = false;
+            }
+
+            if (!mesaj) {
+                document.getElementById('err-mesaj').innerText = "Mesaj alanı boş bırakılamaz.";
+                isValid = false;
+            }
+
+            if (!onay) {
+                document.getElementById('err-onay').innerText = "Verilerin işlenmesini onaylamanız gerekmektedir.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                console.log("Vanilla JS Doğrulaması Başarılı! Gönderilen Veriler:", {
+                    isim, email, telefon, konu, cinsiyet: isCinsiyetSelected, mesaj, onay
+                });
+                document.getElementById('success-message-vanilla').classList.remove('d-none');
+            }
+        }
+    </script>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    formData: {
+                        isim: '',
+                        email: '',
+                        telefon: '',
+                        konu: '',
+                        cinsiyet: '',
+                        mesaj: '',
+                        onay: false
+                    },
+                    errors: {},
+                    isSuccessVue: false
+                }
+            },
+            methods: {
+                validateFormVue() {
+                    this.errors = {};
+                    this.isSuccessVue = false;
+                    let isValid = true;
+
+                    document.querySelectorAll('[id^="err-"]').forEach(div => {
+                        div.innerText = "";
+                    });
+                    document.getElementById('success-message-vanilla').classList.add('d-none');
+
+                    if (!this.formData.isim.trim()) {
+                        this.errors.isim = "İsim alanı boş bırakılamaz.";
+                        isValid = false;
+                    }
+
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!this.formData.email.trim()) {
+                        this.errors.email = "E-Posta alanı boş bırakılamaz.";
+                        isValid = false;
+                    } else if (!emailRegex.test(this.formData.email)) {
+                        this.errors.email = "Geçerli bir E-Posta adresi giriniz.";
+                        isValid = false;
+                    }
+
+                    const telefonRegex = /^[0-9]+$/;
+                    if (!this.formData.telefon.trim()) {
+                        this.errors.telefon = "Telefon numarası boş bırakılamaz.";
+                        isValid = false;
+                    } else if (!telefonRegex.test(this.formData.telefon)) {
+                        this.errors.telefon = "Telefon numarası sadece rakamlardan oluşmalıdır.";
+                        isValid = false;
+                    }
+
+                    if (!this.formData.konu) {
+                        this.errors.konu = "Lütfen bir konu seçiniz.";
+                        isValid = false;
+                    }
+
+                    if (!this.formData.cinsiyet) {
+                        this.errors.cinsiyet = "Lütfen bir hitap şekli seçiniz.";
+                        isValid = false;
+                    }
+
+                    if (!this.formData.mesaj.trim()) {
+                        this.errors.mesaj = "Mesaj alanı boş bırakılamaz.";
+                        isValid = false;
+                    }
+
+                    if (!this.formData.onay) {
+                        this.errors.onay = "Verilerin işlenmesini onaylamanız gerekmektedir.";
+                        isValid = false;
+                    }
+
+                    if (isValid) {
+                        console.log("Vue.js Doğrulaması Başarılı! Gönderilen Veriler:", this.formData);
+                        this.isSuccessVue = true;
+                    }
+                },
+                resetForm() {
+                    this.formData = {
+                        isim: '',
+                        email: '',
+                        telefon: '',
+                        konu: '',
+                        cinsiyet: '',
+                        mesaj: '',
+                        onay: false
+                    };
+                    
+                    this.errors = {};
+                    this.isSuccessVue = false;
+                    
+                    document.querySelectorAll('[id^="err-"]').forEach(div => {
+                        div.innerText = "";
+                    });
+                    document.getElementById('success-message-vanilla').classList.add('d-none');
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
