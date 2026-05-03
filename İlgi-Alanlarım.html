@@ -75,38 +75,25 @@
             margin-top: 10px;
             outline: none;
         }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            color: #38BDF8;
+            text-decoration: none;
+            font-size: .9rem;
+            margin-bottom: 2rem;
+            opacity: .8;
+            transition: opacity .2s;
+        }
+        .back-link:hover { opacity: 1; }
     </style>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-lg custom-navbar mb-4 shadow">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="GirisSayfasi.html">Portfolyo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="GirisSayfasi.html">Ana Sayfa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Hakkımda.html">Hakkımda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Şehrim.html">Şehrim</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="İlgi-Alanlarım.html" style="color: #F8FAFC;">İlgi Alanlarım</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
     <main class="container py-4">
+        
+        <a href="GirisSayfasi.html" class="back-link">&#8592; Ana Sayfaya Dön</a>
         
         <header class="text-center mb-5">
             <h1 class="highlight-text display-5 fw-bold">İlgi Alanlarım</h1>
@@ -185,10 +172,6 @@
                 </div>
             </div>
         </section>
-
-        <div class="text-center mt-5">
-            <a href="GirisSayfasi.html" class="custom-link d-inline-block px-4 py-2 rounded fw-semibold shadow-sm">Ana Sayfaya Dön</a>
-        </div>
 
     </main>
 

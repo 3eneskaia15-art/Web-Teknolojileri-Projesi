@@ -90,33 +90,25 @@
             margin-top: 1rem;
             font-weight: bold;
         }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            color: #38BDF8;
+            text-decoration: none;
+            font-size: .9rem;
+            margin-bottom: 2rem;
+            opacity: .8;
+            transition: opacity .2s;
+        }
+        .back-link:hover { opacity: 1; }
     </style>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-lg custom-navbar mb-4 shadow">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="GirisSayfasi.html">Portfolyo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="GirisSayfasi.html">Ana Sayfa</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Hakkımda.html">Hakkımda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Özgeçmiş.html">Özgeçmiş</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Şehrim.html">Şehrim</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Mirasımız.html">Mirasımız</a></li>
-                        <li class="nav-item"><a class="nav-link" href="İlgi-Alanlarım.html">İlgi Alanlarım</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="İletişim.html" style="color: #F8FAFC;">İletişim</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
     <main class="container py-4" id="app">
+        
+        <a href="GirisSayfasi.html" class="back-link">&#8592; Ana Sayfaya Dön</a>
         <header class="text-center mb-5">
             <h1 class="highlight-text display-5 fw-bold">İletişim</h1>
             <p class="lead">Benimle aşağıdaki bilgilerden veya iletişim formu üzerinden iletişime geçebilirsiniz.</p>
