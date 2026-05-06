@@ -143,16 +143,16 @@
                 <section class="form-box p-4 rounded shadow">
                     <h3 class="highlight-text mb-4">Bana Mesaj Gönderin</h3>
                     
-                    <form id="contactForm" @submit.prevent>
+                    <form id="contactForm" action="iletisim_sonuc.php" method="POST">
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label for="isim" class="form-label">Adınız Soyadınız *</label>
-                                <input type="text" class="form-control" id="isim" v-model="formData.isim" placeholder="Ad Soyad">
+                                <input type="text" class="form-control" id="isim" name="isim" v-model="formData.isim" placeholder="Ad Soyad">
                                 <div class="error-message" id="err-isim">{{ errors.isim }}</div>
                             </div>
                             <div class="col-md-6">
                                 <label for="email" class="form-label">E-Posta Adresi *</label>
-                                <input type="email" class="form-control" id="email" v-model="formData.email" placeholder="ornek@mail.com">
+                                <input type="email" class="form-control" id="email" name="email" v-model="formData.email" placeholder="ornek@mail.com">
                                 <div class="error-message" id="err-email">{{ errors.email }}</div>
                             </div>
                         </div>
@@ -160,12 +160,12 @@
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label for="telefon" class="form-label">Telefon Numarası (Sadece Rakam) *</label>
-                                <input type="tel" class="form-control" id="telefon" v-model="formData.telefon" placeholder="05551234567">
+                                <input type="tel" class="form-control" id="telefon" name="telefon" v-model="formData.telefon" placeholder="05551234567">
                                 <div class="error-message" id="err-telefon">{{ errors.telefon }}</div>
                             </div>
                             <div class="col-md-6">
                                 <label for="konu" class="form-label">Konu Seçiniz *</label>
-                                <select class="form-select" id="konu" v-model="formData.konu">
+                                <select class="form-select" id="konu" name="konu" v-model="formData.konu">
                                     <option value="" disabled selected>Lütfen Bir Konu Seçin</option>
                                     <option value="İş Teklifi">İş Teklifi</option>
                                     <option value="Proje İşbirliği">Proje İşbirliği</option>
@@ -195,13 +195,13 @@
 
                         <div class="mb-3">
                             <label for="mesaj" class="form-label">Mesajınız *</label>
-                            <textarea class="form-control" id="mesaj" rows="4" v-model="formData.mesaj" placeholder="Mesajınızı buraya yazın..."></textarea>
+                            <textarea class="form-control" id="mesaj" name="mesaj" rows="4" v-model="formData.mesaj" placeholder="Mesajınızı buraya yazın..."></textarea>
                             <div class="error-message" id="err-mesaj">{{ errors.mesaj }}</div>
                         </div>
 
                         <div class="mb-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="onay" v-model="formData.onay">
+                                <input class="form-check-input" type="checkbox" id="onay" name="onay" v-model="formData.onay">
                                 <label class="form-check-label" for="onay">
                                     Verilerimin işlenmesini kabul ediyorum. *
                                 </label>
@@ -311,10 +311,7 @@
             }
 
             if (isValid) {
-                console.log("Vanilla JS Doğrulaması Başarılı! Gönderilen Veriler:", {
-                    isim, email, telefon, konu, cinsiyet: isCinsiyetSelected, mesaj, onay
-                });
-                document.getElementById('success-message-vanilla').classList.remove('d-none');
+                document.getElementById('contactForm').submit();
             }
         }
     </script>
@@ -393,8 +390,7 @@
                     }
 
                     if (isValid) {
-                        console.log("Vue.js Doğrulaması Başarılı! Gönderilen Veriler:", this.formData);
-                        this.isSuccessVue = true;
+                        document.getElementById('contactForm').submit();
                     }
                 },
                 resetForm() {
