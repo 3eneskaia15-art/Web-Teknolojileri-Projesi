@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - Enes Kaya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <main class="container py-5">
+        <a href="GirisSayfasi.html" class="back-link">&#8592; Ana Sayfaya Dön</a>
+        <header class="text-center mb-5">
+            <h1 class="highlight-text display-5 fw-bold">Giriş Yap</h1>
+            <p class="lead">Lütfen öğrenci bilgilerinizi giriniz.</p>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <section class="form-box p-4 rounded shadow">
+                    
+                    <div id="server-error" class="alert alert-danger d-none" role="alert">
+                        Hatalı kullanıcı adı veya şifre! Lütfen tekrar deneyin.
+                    </div>
+
+                    <form id="loginForm" action="login_sonuc.php" method="POST" onsubmit="return validateLogin()">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Kullanıcı Adı (Öğrenci Maili)</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="b251210099@sakarya.edu.tr">
+                            <div class="error-message" id="err-email"></div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Şifre (Öğrenci No)</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="b251210099">
+                            <div class="error-message" id="err-password"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-custom-vanilla w-100 py-2">Giriş Yap</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if(urlParams.get('error') === '1') {
+                document.getElementById('server-error').classList.remove('d-none');
+            }
+        });
+
+        function validateLogin() {
+            let isValid = true;
+            document.getElementById('err-email').innerText = "";
+            document.getElementById('err-password').innerText = "";
+            document.getElementById('server-error').classList.add('d-none');
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (!email) {
+                document.getElementById('err-email').innerText = "Mail alanı boş bırakılamaz.";
+                isValid = false;
+            } else if (!email.includes('@')) {
+                document.getElementById('err-email').innerText = "Geçerli bir e-posta adresi giriniz.";
+                isValid = false;
+            }
+
+            if (!password) {
+                document.getElementById('err-password').innerText = "Şifre alanı boş bırakılamaz.";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

@@ -5,30 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim Sonucu - Enes Kaya</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #0F172A;
-            color: #F8FAFC;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        .highlight-text { color: #38BDF8; }
-        .result-box {
-            background-color: #1E293B;
-            border-left: 5px solid #38BDF8;
-        }
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: .4rem;
-            color: #38BDF8;
-            text-decoration: none;
-            font-size: .9rem;
-            margin-bottom: 2rem;
-            opacity: .8;
-            transition: opacity .2s;
-        }
-        .back-link:hover { opacity: 1; text-decoration: underline; }
-    </style>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <main class="container py-5">

@@ -1,0 +1,359 @@
+:root {
+    --bg-dark: #0F172A;
+    --bg-card: #1E293B;
+    --accent: #38BDF8;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    --text-body: #E2E8F0;
+    --border: #334155;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+}
+
+.highlight-text {
+    color: var(--accent);
+}
+
+.highlight-green {
+    color: #22c55e;
+}
+
+.intro-box,
+.info-box,
+.form-box,
+.result-box,
+.content-box {
+    background-color: var(--bg-card);
+    border-left: 5px solid var(--accent);
+}
+
+.content-box {
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.sakaryaspor-box {
+    border-left: 5px solid #22c55e;
+}
+
+/* Buton/Kutu Tipi Link (Menü Linkleri) */
+.custom-link {
+    background-color: var(--bg-card);
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.custom-link:hover {
+    background-color: var(--accent);
+    color: var(--bg-dark);
+}
+
+/* Metin Tipi Link */
+.text-custom-link {
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.text-custom-link:hover {
+    color: var(--text-main);
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: .9rem;
+    margin-bottom: 2rem;
+    opacity: .8;
+    transition: opacity .2s;
+}
+
+.back-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.custom-navbar {
+    background-color: var(--bg-card);
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: var(--accent);
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--text-main);
+}
+
+/* Özgeçmiş */
+.page-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    margin-bottom: .4rem;
+}
+
+.page-header .subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.header-line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin: .8rem auto 0;
+    border-radius: 2px;
+}
+
+.section-card {
+    background-color: var(--bg-card);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 .5rem .5rem 0;
+    padding: 1.5rem 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-card h2 {
+    color: var(--accent);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.about-text {
+    color: var(--text-body);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+    font-style: italic;
+    border-left: 3px solid var(--border);
+    padding-left: 1rem;
+}
+
+.edu-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 .4rem;
+}
+
+.edu-table tr td,
+.edu-table tr th {
+    padding: .6rem 1rem;
+    font-size: .95rem;
+}
+
+.edu-table tr th {
+    color: var(--text-muted);
+    font-weight: 600;
+    width: 40%;
+    background: #162032;
+    border-radius: .3rem 0 0 .3rem;
+}
+
+.edu-table tr td {
+    color: var(--text-body);
+    background: #1a2b42;
+    border-radius: 0 .3rem .3rem 0;
+}
+
+.edu-table a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.edu-table a:hover {
+    text-decoration: underline;
+}
+
+.project-item {
+    background: #162032;
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: .9rem;
+    transition: border-color .2s, transform .2s;
+}
+
+.project-item .proj-title {
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: .98rem;
+    margin-bottom: .3rem;
+}
+
+.project-item .proj-desc {
+    color: var(--text-muted);
+    font-size: .9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.tech-badge {
+    display: inline-block;
+    background: rgba(56, 189, 248, .12);
+    color: var(--accent);
+    border: 1px solid rgba(56, 189, 248, .3);
+    border-radius: 999px;
+    font-size: .75rem;
+    padding: .15rem .65rem;
+    margin-top: .5rem;
+    font-weight: 600;
+}
+
+.empty-note {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: .95rem;
+    padding: .4rem 0;
+}
+
+/* Şehrim */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* İletişim Formları */
+.form-control,
+.form-select {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25);
+}
+
+.btn-custom-vue {
+    background-color: #42b883;
+    color: var(--bg-card);
+    font-weight: bold;
+}
+
+.btn-custom-vue:hover {
+    background-color: #33a06f;
+    color: white;
+}
+
+.btn-custom-vanilla {
+    background-color: #f7df1e;
+    color: var(--bg-card);
+    font-weight: bold;
+}
+
+.btn-custom-vanilla:hover {
+    background-color: #d4bf14;
+    color: var(--bg-card);
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.success-message {
+    color: #22c55e;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* İlgi Alanlarım */
+.api-result-item {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.api-result-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px -1px rgba(56, 189, 248, 0.2);
+}
+
+.api-result-item img {
+    border-radius: 5px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.api-result-item audio {
+    height: 30px;
+    margin-top: 10px;
+    outline: none;
+}
+
+/* Mirasımız */
+.table-custom {
+    color: var(--text-main);
+    --bs-table-bg: transparent;
+    --bs-table-color: #F8FAFC;
+    --bs-table-border-color: #334155;
+}
+
+.table-custom th {
+    color: var(--accent);
+}
+
+.sakaryaspor-table th {
+    color: #22c55e;
+}
+
+.hero-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--border);
+}
+
+figure figcaption {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+}

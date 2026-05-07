@@ -8,101 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <style>
-        body {
-            background-color: #0F172A;
-            color: #F8FAFC;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        .highlight-text {
-            color: #38BDF8;
-        }
-
-        .info-box, .form-box {
-            background-color: #1E293B;
-            border-left: 5px solid #38BDF8;
-        }
-
-        .custom-navbar {
-            background-color: #1E293B;
-        }
-        
-        .custom-navbar .navbar-brand, .custom-navbar .nav-link {
-            color: #38BDF8;
-        }
-
-        .custom-navbar .nav-link:hover {
-            color: #F8FAFC;
-        }
-
-        .form-control, .form-select {
-            background-color: #0F172A;
-            border: 1px solid #334155;
-            color: #F8FAFC;
-        }
-
-        .form-control:focus, .form-select:focus {
-            background-color: #0F172A;
-            color: #F8FAFC;
-            border-color: #38BDF8;
-            box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25);
-        }
-
-        .btn-custom-vue {
-            background-color: #42b883;
-            color: #1E293B;
-            font-weight: bold;
-        }
-        .btn-custom-vue:hover {
-            background-color: #33a06f;
-            color: white;
-        }
-
-        .btn-custom-vanilla {
-            background-color: #f7df1e;
-            color: #1E293B;
-            font-weight: bold;
-        }
-        .btn-custom-vanilla:hover {
-            background-color: #d4bf14;
-            color: #1E293B;
-        }
-
-        .custom-link {
-            color: #38BDF8;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .custom-link:hover {
-            color: #F8FAFC;
-            text-decoration: underline;
-        }
-        
-        .error-message {
-            color: #ef4444;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-        }
-        .success-message {
-            color: #22c55e;
-            font-size: 1rem;
-            margin-top: 1rem;
-            font-weight: bold;
-        }
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: .4rem;
-            color: #38BDF8;
-            text-decoration: none;
-            font-size: .9rem;
-            margin-bottom: 2rem;
-            opacity: .8;
-            transition: opacity .2s;
-        }
-        .back-link:hover { opacity: 1; }
-    </style>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -121,15 +27,15 @@
                     <ul class="list-unstyled">
                         <li class="mb-3">
                             <strong><i class="bi bi-envelope"></i> E-Posta:</strong><br>
-                            <a href="mailto:ogr.enes.kaya12@sakarya.edu.tr" class="custom-link">ogr.enes.kaya12@sakarya.edu.tr</a>
+                            <a href="mailto:ogr.enes.kaya12@sakarya.edu.tr" class="text-custom-link">ogr.enes.kaya12@sakarya.edu.tr</a>
                         </li>
                         <li class="mb-3">
                             <strong><i class="bi bi-github"></i> Github:</strong><br>
-                            <a href="https://github.com/3eneskaia15-art" target="_blank" class="custom-link">github.com/3eneskaia15-art</a>
+                            <a href="https://github.com/3eneskaia15-art" target="_blank" class="text-custom-link">github.com/3eneskaia15-art</a>
                         </li>
                         <li class="mb-3">
                             <strong><i class="bi bi-linkedin"></i> LinkedIn:</strong><br>
-                            <a href="https://www.linkedin.com/in/enes-kaya-bba56a401/" target="_blank" class="custom-link">linkedin.com/in/enes-kaya</a>
+                            <a href="https://www.linkedin.com/in/enes-kaya-bba56a401/" target="_blank" class="text-custom-link">linkedin.com/in/enes-kaya</a>
                         </li>
                         <li class="mb-3">
                             <strong><i class="bi bi-geo-alt"></i> Adres:</strong><br>
