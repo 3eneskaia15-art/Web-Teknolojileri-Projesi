@@ -26,7 +26,7 @@ if ($email === '' || $password === '' || $email !== $expected_email || $password
         <section class="form-box p-5 rounded shadow d-inline-block mt-5 text-center" style="border-left: 5px solid #22c55e;">
             <h1 class="highlight-green mb-4">Hoşgeldiniz <?php echo htmlspecialchars($password); ?></h1>
             <p class="lead">Başarılı bir şekilde giriş yaptınız.</p>
-            <a href="GirisSayfasi.html" class="btn btn-outline-info mt-4 px-4 py-2">Ana Sayfaya Git</a>
+            <a href="index.html" class="btn btn-outline-info mt-4 px-4 py-2">Ana Sayfaya Git</a>
         </section>
     </main>
 </body>
