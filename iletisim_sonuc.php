@@ -9,7 +9,7 @@
 </head>
 <body>
     <main class="container py-5">
-        <a href="İletişim.html" class="back-link">&#8592; İletişim Sayfasına Dön</a>
+        <a href="iletisim.html" class="back-link">&#8592; İletişim Sayfasına Dön</a>
         <header class="text-center mb-5">
             <h1 class="highlight-text display-5 fw-bold">Mesajınız Alındı</h1>
             <p class="lead">Göndermiş olduğunuz bilgiler başarıyla sunucuya ulaştı.</p>

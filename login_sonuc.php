@@ -8,7 +8,7 @@ $expected_password = 'b251210099';
 
 // Eğer boş veya yanlışsa geri yönlendir
 if ($email === '' || $password === '' || $email !== $expected_email || $password !== $expected_password) {
-    header('Location: Login.html?error=1');
+    header('Location: login.html?error=1');
     exit();
 }
 ?>
